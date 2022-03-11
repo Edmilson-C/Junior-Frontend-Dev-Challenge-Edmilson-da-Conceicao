@@ -1,7 +1,9 @@
+import Header from './components/header/header.component'
+
 function App() {
   return (
     <div className="App">
-      Junior Frontend Dev Challenge – Edmilson da Conceição
+      <Header />
     </div>
   )
 }
