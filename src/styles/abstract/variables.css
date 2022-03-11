@@ -1,0 +1,22 @@
+:root {
+  /* COLORS  */
+  --color-primary: #22c68a;
+  --color-primary-dark: #20b883;
+  --color-primary-light: #e4f7f1;
+  --color-primary-tag: #a8ffe0;
+
+  --color-text: #666666;
+  --color-text-dark: #333333;
+  --color-text-light: #999999;
+
+  --color-red: #e73f5d;
+  --color-black: #141414;
+  --color-white: #ffffff;
+
+  /* FONTS */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  --font-normal: 400;
+  --font-bold: 700;
+}

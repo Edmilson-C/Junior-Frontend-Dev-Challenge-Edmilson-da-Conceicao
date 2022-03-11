@@ -1,0 +1,26 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #EEEFF3;
+}
+
+.container {
+  width: 100%;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1366px;
+    padding: 0 1.5rem;
+  }
+}
