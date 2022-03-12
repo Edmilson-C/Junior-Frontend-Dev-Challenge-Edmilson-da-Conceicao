@@ -1,0 +1,30 @@
+.input-group {
+  position: relative;
+  margin-top: 1rem;
+
+  &__input {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-primary);
+    background-color: transparent;
+    height: 3.2rem;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 1.8rem;
+    transition: all .2s ease-out;
+  }
+
+  &__input:focus ~ &__label {
+    top: -10px;
+    font-size: 1.4rem;
+    font-weight: var(--font-bold);
+  }
+}
