@@ -1,0 +1,43 @@
+.btn {
+  padding: 1.6rem 0;
+  border: none;
+
+  font-weight: var(--font-bold);
+  font-size: 1.6rem;
+
+  &--white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-radius: 4px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+
+  &--green {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 4px;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  
+  &--grey {
+    background-color: #eee;
+    color: #737380;
+    border-radius: 8px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+
+  &--red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-radius: 8px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+}
