@@ -16,7 +16,7 @@ export const ContactsProvider = ({ children }) => {
       setContacts([...data])
     } catch (error) {
       // eslint-disable-next-line no-alert
-      alert(`An error has occured while request contacts \n${error}`)
+      alert(`An error has occured while add contacts to context \n${error}`)
     }
   }
 
