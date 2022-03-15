@@ -8,7 +8,7 @@ const PersonInfo = ({
   imgUrl, name, email, parent
 }) => (
   <div className={`person-info person-info--${parent}`}>
-    <div className="person-info__image-container">
+    <div className={`person-info__image-container person-info__image-container--${parent}`}>
       <img src={imgUrl || BlackManImage} alt={`${name}`} className="person-info__image" />
     </div>
     <div className="person-info__details">
