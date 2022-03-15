@@ -55,6 +55,22 @@ const Homepage = () => {
           </p>
           <img src={blackManImage} alt="" className="about__image" />
         </div>
+
+        <div className="contacts">
+          {contacts.map(({
+            id, name, email, empresa, website, codPostal, phoneNum
+          }) => (
+            <ContactPreview
+              key={id}
+              name={name}
+              email={email}
+              empresa={empresa}
+              website={website}
+              codPostal={codPostal}
+              phoneNum={phoneNum}
+            />
+          ))}
+        </div>
       </div>
     </main>
   )
