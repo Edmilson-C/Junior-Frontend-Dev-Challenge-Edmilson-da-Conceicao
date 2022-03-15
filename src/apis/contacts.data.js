@@ -29,6 +29,6 @@ export const requestContacts = async () => {
     }, [])
   } catch (error) {
     // eslint-disable-next-line no-alert
-    alert(`An error has occured while requesting contacts \n${error}`)
+    alert(`An error has occurred while requesting contacts \n${error}`)
   }
 }
