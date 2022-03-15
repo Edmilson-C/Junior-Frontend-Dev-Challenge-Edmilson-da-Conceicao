@@ -1,5 +1,7 @@
 import React from 'react'
 
+import BlackManImage from '../../assets/black-man.png'
+
 import './person-info.styles.scss'
 
 const PersonInfo = ({
@@ -7,7 +9,7 @@ const PersonInfo = ({
 }) => (
   <div className={`person-info person-info--${parent}`}>
     <div className="person-info__image-container">
-      <img src={imgUrl} alt={`${name}`} className="person-info__image" />
+      <img src={imgUrl || BlackManImage} alt={`${name}`} className="person-info__image" />
     </div>
     <div className="person-info__details">
       <p className={`person-info__name person-info__name--${parent}`}>{name}</p>
