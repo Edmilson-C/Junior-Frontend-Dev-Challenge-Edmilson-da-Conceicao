@@ -1,10 +1,10 @@
 /* eslint-disable consistent-return */
-const url = 'https://34100289-review-master-8dyme2.preview.eks.technoplus.link/api/v1/contacts'
+const url = 'https://glacial-harbor-51821.herokuapp.com/34100289-review-master-8dyme2.preview.eks.technoplus.link/api/v1/contacts'
 
 export const requestContacts = async () => {
   try {
     const res = await fetch(url)
-    const response = res.json()
+    const response = await res.json()
 
     return response.reduce((acc, item) => {
       const {
