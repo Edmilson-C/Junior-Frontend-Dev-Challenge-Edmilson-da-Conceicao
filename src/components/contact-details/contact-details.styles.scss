@@ -1,0 +1,80 @@
+.contact-details {
+  background-color: rgba(#000, 0.2);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+
+    font-size: 2rem;
+    color: var(--color-black);
+
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__trash {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+
+    font-size: 2.8rem;
+    color: var(--color-red);
+
+    cursor: pointer;
+  }
+
+  &__colab-logo {
+    width: 40%;
+    opacity: 0.2;
+    position: absolute;
+    top: 15rem;
+    right: 1rem;
+  }
+
+  &__content {
+    background-color: var(--color-white);
+    border-radius: 8px;
+
+    width: 40%;
+    padding: 4.8rem 5.8rem;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .person-info {
+    margin-bottom: 4rem;
+  }
+
+  &__detail {
+    color: var(--color-black);
+    font-size: 2.4rem;
+    padding-left: 3.2rem;
+
+    span {
+      color: var(--color-text-dark);
+      font-size: 2rem;
+      margin-left: 1.6rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.4rem;
+    }
+  }
+}
