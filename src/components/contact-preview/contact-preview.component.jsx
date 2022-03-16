@@ -8,13 +8,25 @@ import PersonInfo from '../person-info/person-info.component'
 import './contact-preview.styles.scss'
 
 const ContactPreview = ({
-  imgUrl, name, email, empresa, website, codPostal, phoneNum
+  imgUrl, name, email, empresa, website, codPostal, phoneNum, location, categorias
 }) => {
   const [isAddContactVisible, setIsAddContactVisible] = useState(false)
 
   return (
     <div className="contact-preview">
-      <ContactDetails isVisible={isAddContactVisible} setVisibility={setIsAddContactVisible} />
+      <ContactDetails
+        imgUrl={imgUrl}
+        name={name}
+        email={email}
+        empresa={empresa}
+        website={website}
+        codPostal={codPostal}
+        phoneNum={phoneNum}
+        location={location}
+        categorias={categorias}
+        isVisible={isAddContactVisible}
+        setVisibility={setIsAddContactVisible}
+      />
       <PersonInfo imgUrl={imgUrl} name={name} email={email} parent="preview" />
       <div className="contact-preview__details">
         <p className="contact-preview__detail">
@@ -31,7 +43,13 @@ const ContactPreview = ({
         </p>
       </div>
       <p className="contact-preview__number">{phoneNum}</p>
-      <span onClick={() => { setIsAddContactVisible(true) }}><i className="fas fa-compress-alt contact-preview__view-contact" /></span>
+      <span
+        onClick={() => {
+          setIsAddContactVisible(true)
+        }}
+      >
+        <i className="fas fa-compress-alt contact-preview__view-contact" />
+      </span>
     </div>
   )
 }
