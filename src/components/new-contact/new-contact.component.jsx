@@ -31,7 +31,7 @@ const NewContact = ({ isVisible, setVisibility }) => {
 
         <span onClick={handleClick}><i id="new-contact__close" className="fas fa-times new-contact__close" /></span>
 
-        <div className="new-contact__form">
+        <form className="new-contact__form">
           <Input type="text" id="contact-name" name="contact-name" label="Nome" handleChange={handleChange} />
           <Input type="email" id="contact-email" name="contact-email" label="Email" handleChange={handleChange} />
           <Input type="tel" id="contact-telefone" name="contact-telefone" label="Telefone" handleChange={handleChange} />
@@ -41,7 +41,7 @@ const NewContact = ({ isVisible, setVisibility }) => {
           <Input type="text" id="contact-rua" name="contact-rua" label="Rua" handleChange={handleChange} />
           <Input type="text" id="contact-city" name="contact-city" label="Cidade" handleChange={handleChange} />
           <Input type="number" id="contact-postal" name="contact-postal" label="Código Postal" handleChange={handleChange} />
-        </div>
+        </form>
 
         <Button id="contact-button" content="Gravar Contacto" type="green" handleClick={handleClick} />
       </div>
