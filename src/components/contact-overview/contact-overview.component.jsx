@@ -7,7 +7,7 @@ import './contact-overview.styles.scss'
 const ContactOverview = ({ contactos }) => (
   <div className="contact-overview">
     {contactos.map(({
-      id, name, email, empresa, website, codPostal, phoneNum
+      id, name, email, empresa, website, codPostal, phoneNum, location, categorias
     }) => (
       <ContactPreview
         key={id}
@@ -17,6 +17,8 @@ const ContactOverview = ({ contactos }) => (
         website={website}
         codPostal={codPostal}
         phoneNum={phoneNum}
+        location={location}
+        categorias={categorias}
       />
     ))}
   </div>
