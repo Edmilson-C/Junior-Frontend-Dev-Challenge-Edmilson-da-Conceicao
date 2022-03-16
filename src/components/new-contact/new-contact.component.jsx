@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react'
 
 import Input from '../input/input.component'
@@ -5,16 +7,20 @@ import Button from '../button/button.component'
 
 import './new-contact.styles.scss'
 
-const NewContact = () => {
+const NewContact = ({ isVisible, setVisibility }) => {
   const handleChange = (event) => {
     console.log(event.target.value)
   }
 
-  const handleClick = () => {
-    console.log('Button clicked!')
+  const handleClick = (event) => {
+    const { id } = event.target
+
+    if (id === 'new-contact__close') {
+      setVisibility(false)
+    }
   }
 
-  return (
+  return isVisible && (
     <div className="new-contact">
       <div className="new-contact__content">
         <h3 className="heading-3 new-contact__title">
@@ -23,7 +29,7 @@ const NewContact = () => {
           Novo Contacto
         </h3>
 
-        <i className="fas fa-times new-contact__close" />
+        <span onClick={handleClick}><i id="new-contact__close" className="fas fa-times new-contact__close" /></span>
 
         <div className="new-contact__form">
           <Input type="text" id="contact-name" name="contact-name" label="Nome" handleChange={handleChange} />
