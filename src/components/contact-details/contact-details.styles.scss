@@ -6,9 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: relative;
   z-index: 2;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 
   &__close {
     position: absolute;

@@ -8,6 +8,10 @@
   align-items: center;
   z-index: 2;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
   &__content {
     background-color: var(--color-white);
     border-radius: 8px;
