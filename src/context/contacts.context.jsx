@@ -22,7 +22,7 @@ export const ContactsProvider = ({ children }) => {
   }
 
   const addContact = (newContact) => {
-    setContacts([...contacts, newContact])
+    setContacts([newContact, ...contacts])
   }
 
   return (
