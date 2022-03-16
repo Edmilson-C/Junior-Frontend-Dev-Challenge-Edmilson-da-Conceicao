@@ -5,10 +5,11 @@ import './button.styles.scss'
 const Button = ({
   id,
   content,
+  isFormButton,
   type,
   handleClick
 }) => (
-  <button type="button" id={id} className={`btn btn--${type}`} onClick={handleClick}>
+  <button type={isFormButton ? 'submit' : 'button'} id={id} className={`btn btn--${type}`} onClick={handleClick}>
     {content}
   </button>
 )
