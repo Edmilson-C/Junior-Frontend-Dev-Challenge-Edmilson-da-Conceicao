@@ -32,15 +32,15 @@ const NewContact = ({ isVisible, setVisibility }) => {
         <span onClick={handleClick}><i id="new-contact__close" className="fas fa-times new-contact__close" /></span>
 
         <form className="new-contact__form">
-          <Input type="text" id="contact-name" name="contact-name" label="Nome" handleChange={handleChange} />
-          <Input type="email" id="contact-email" name="contact-email" label="Email" handleChange={handleChange} />
-          <Input type="tel" id="contact-telefone" name="contact-telefone" label="Telefone" handleChange={handleChange} />
-          <Input type="url" id="contact-website" name="contact-website" label="Website" handleChange={handleChange} />
-          <Input type="text" id="contact-company" name="contact-company" label="Nome da empresa" handleChange={handleChange} />
-          <Input type="text" id="contact-category" name="contact-category" label="Categorias" handleChange={handleChange} />
-          <Input type="text" id="contact-rua" name="contact-rua" label="Rua" handleChange={handleChange} />
-          <Input type="text" id="contact-city" name="contact-city" label="Cidade" handleChange={handleChange} />
-          <Input type="number" id="contact-postal" name="contact-postal" label="Código Postal" handleChange={handleChange} />
+          <Input type="text" id="name" name="name" label="Nome" handleChange={handleChange} />
+          <Input type="email" id="email" name="email" label="Email" handleChange={handleChange} />
+          <Input type="tel" id="phoneNum" name="phoneNum" label="Telefone" handleChange={handleChange} />
+          <Input type="url" id="website" name="website" label="Website" handleChange={handleChange} />
+          <Input type="text" id="empresa" name="empresa" label="Nome da empresa" handleChange={handleChange} />
+          <Input type="text" id="categorias" name="categorias" label="Categorias" handleChange={handleChange} />
+          <Input type="text" id="rua" name="rua" label="Rua" handleChange={handleChange} />
+          <Input type="text" id="cidade" name="cidade" label="Cidade" handleChange={handleChange} />
+          <Input type="number" id="codPostal" name="codPostal" label="Código Postal" handleChange={handleChange} />
         </form>
 
         <Button id="contact-button" content="Gravar Contacto" type="green" handleClick={handleClick} />
