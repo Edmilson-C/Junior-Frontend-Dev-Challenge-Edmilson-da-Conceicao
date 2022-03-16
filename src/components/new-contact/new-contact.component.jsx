@@ -46,14 +46,29 @@ const NewContact = ({ isVisible, setVisibility }) => {
   const handleClick = (event) => {
     const { id } = event.target
 
-    if (id === 'new-contact__close') {
-      setVisibility(false)
-    } else if (id === 'contact-button') {
+    if (id === 'contact-button') {
       location = `${rua}, ${cidade}`
       setNewContact({ ...newContact, id: nanoid(), location })
 
       addContact(newContact)
     }
+
+    setNewContact({
+      id: 0,
+      name: '',
+      email: '',
+      website: '',
+      empresa: '',
+      phoneNum: '',
+      location: '',
+      categorias: [],
+      codPostal: ''
+    })
+
+    setRua('')
+    setCidade('')
+
+    setVisibility(false)
   }
 
   return isVisible && (
