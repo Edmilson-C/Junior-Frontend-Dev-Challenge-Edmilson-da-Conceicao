@@ -105,10 +105,4 @@ main {
       bottom: 0;
     }
   }
-
-  .contacts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
-  }
 }
