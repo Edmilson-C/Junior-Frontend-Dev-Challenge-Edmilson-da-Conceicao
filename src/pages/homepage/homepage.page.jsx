@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext, useEffect, useState } from 'react'
 
+import NewContact from '../../components/new-contact/new-contact.component'
 import Button from '../../components/button/button.component'
 import Input from '../../components/input/input.component'
 import ContactOverview from '../../components/contact-overview/contact-overview.component'
@@ -18,6 +19,8 @@ const Homepage = () => {
   const [company, setCompany] = useState()
   const [contactsDisplayed, setContactsDisplayed] = useState([])
 
+  const [isAddContactVisible, setIsAddContactVisible] = useState(false)
+
   useEffect(() => {
     getContacts()
   }, [])
@@ -27,7 +30,7 @@ const Homepage = () => {
   }, [contacts])
 
   const newContact = () => {
-    alert('Add new contact')
+    setIsAddContactVisible(true)
   }
 
   const filterContacts = (event) => {
@@ -48,6 +51,7 @@ const Homepage = () => {
 
   return (
     <main>
+      <NewContact isVisible={isAddContactVisible} setVisibility={setIsAddContactVisible} />
       <div className="container">
         <div className="add-contact">
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
