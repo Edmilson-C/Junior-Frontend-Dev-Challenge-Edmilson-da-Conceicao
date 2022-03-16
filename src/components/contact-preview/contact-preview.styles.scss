@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   .person-info {
     align-self: flex-start;
@@ -39,5 +40,16 @@
       background-color: #3DC998;
       border-radius: 0 15px 15px 0;
     }
+  }
+
+  &__view-contact {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2.8rem;
+
+    color: var(--color-primary);
+    font-size: 2.4rem;
+
+    cursor: pointer;
   }
 }

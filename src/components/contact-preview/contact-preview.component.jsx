@@ -24,6 +24,7 @@ const ContactPreview = ({
       </p>
     </div>
     <p className="contact-preview__number">{phoneNum}</p>
+    <i className="fas fa-compress-alt contact-preview__view-contact" />
   </div>
 )
 
