@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import Button from '../../components/button/button.component'
 import Input from '../../components/input/input.component'
-import ContactPreview from '../../components/contact-preview/contact-preview.component'
+import ContactOverview from '../../components/contact-overview/contact-overview.component'
 
 import { ContactsContext } from '../../context/contacts.context'
 
@@ -14,12 +14,36 @@ import './homepage.styles.scss'
 const Homepage = () => {
   const { contacts, getContacts } = useContext(ContactsContext)
 
+  const [nome, setNome] = useState()
+  const [company, setCompany] = useState()
+  const [contactsDisplayed, setContactsDisplayed] = useState([])
+
   useEffect(() => {
     getContacts()
   }, [])
 
+  useEffect(() => {
+    setContactsDisplayed(contacts)
+  }, [contacts])
+
   const newContact = () => {
     alert('Add new contact')
+  }
+
+  const filterContacts = (event) => {
+    const { name, value } = event.target
+
+    if (name === 'filter-name') {
+      setNome(value)
+    } else {
+      setCompany(value)
+    }
+
+    const aux = contacts.filter(
+      (item) => item.name.includes(nome) || item.empresa.includes(company)
+    )
+
+    setContactsDisplayed(aux)
   }
 
   return (
@@ -35,15 +59,29 @@ const Homepage = () => {
         </div>
 
         <div className="filter">
-          <h1 className="filter__qty">{contacts.length || '-'}</h1>
+          <h1 className="filter__qty">{contactsDisplayed.length || 0}</h1>
           <h2 className="filter__title">
             Contactos <span>Adicionados</span>
           </h2>
           <p className="filter__subtitle">
             Uma plataforma especializada ma prospeção de novos clientes para o seu negócio
           </p>
-          <Input type="text" id="filter-name" label="Nome" />
-          <Input type="text" id="filter-company" label="Empresa" />
+          <Input
+            type="text"
+            id="filter-name"
+            name="filter-name"
+            label="Nome"
+            value={nome}
+            handleChange={filterContacts}
+          />
+          <Input
+            type="text"
+            id="filter-company"
+            name="filter-company"
+            label="Empresa"
+            value={company}
+            handleChange={filterContacts}
+          />
         </div>
 
         <div className="about">
@@ -56,21 +94,7 @@ const Homepage = () => {
           <img src={blackManImage} alt="" className="about__image" />
         </div>
 
-        <div className="contacts">
-          {contacts.map(({
-            id, name, email, empresa, website, codPostal, phoneNum
-          }) => (
-            <ContactPreview
-              key={id}
-              name={name}
-              email={email}
-              empresa={empresa}
-              website={website}
-              codPostal={codPostal}
-              phoneNum={phoneNum}
-            />
-          ))}
-        </div>
+        <ContactOverview contactos={contactsDisplayed} />
       </div>
     </main>
   )
