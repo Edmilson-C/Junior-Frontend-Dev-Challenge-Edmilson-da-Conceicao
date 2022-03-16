@@ -19,7 +19,7 @@ export const requestContacts = async () => {
         email,
         website,
         empresa: company.name,
-        phoneNum: phone,
+        phoneNum: `+258 ${phone}`,
         location: `${address.street}, ${address.city}`,
         categorias,
         codPostal: address.zipCode
