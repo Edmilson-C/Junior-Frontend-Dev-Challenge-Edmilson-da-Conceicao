@@ -13,6 +13,10 @@
   &__image-container {
     height: 100%;
 
+    &--preview {
+      margin-right: 1rem;
+    }
+
     &--details {
       margin-right: 2.8rem;
     }
