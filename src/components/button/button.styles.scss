@@ -1,0 +1,64 @@
+.btn {
+  padding: 1.6rem 0;
+  border: none;
+  cursor: pointer;
+
+  font-weight: var(--font-bold);
+  font-size: 1.6rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.4rem;
+    padding: 1.4rem 0;
+  }
+
+  &--white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-radius: 4px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+
+    @media (max-width: 900px) {
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+
+  }
+
+  &--green {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 4px;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    @media (max-width: 1040px) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @media (max-width: 740px) {
+      width: 100%;
+    }
+  }
+
+  &--grey {
+    background-color: #eee;
+    color: #737380;
+    border-radius: 8px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+
+  &--red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-radius: 8px;
+
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+}

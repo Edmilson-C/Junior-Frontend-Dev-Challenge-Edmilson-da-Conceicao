@@ -1,0 +1,52 @@
+.person-info {
+  display: flex;
+  align-items: center;
+
+  &--preview {
+    height: 5.4rem;
+  }
+
+  &--details {
+    height: 12rem;
+  }
+
+  &__image-container {
+    height: 100%;
+
+    &--preview {
+      margin-right: 1rem;
+    }
+
+    &--details {
+      margin-right: 2.8rem;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    color: var(--color-text-dark);
+    font-weight: var(--font-bold);
+    margin-bottom: 2px;
+
+    &--details {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__email {
+    color: var(--color-text-light);
+
+    &--preview {
+      font-size: 1.2rem;
+    }
+
+    &--details {
+      font-size: 2.4rem;
+    }
+  }
+}

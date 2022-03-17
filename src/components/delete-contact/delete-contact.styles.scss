@@ -1,0 +1,49 @@
+.delete-contact {
+  &__content {
+    background-color: var(--color-white);
+    border-radius: 0.8rem;
+
+    width: 52rem;
+    height: 30rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 525px) {
+      width: 80%;
+      height: 50vw;
+      padding: 1rem;
+    }
+  }
+
+  &__close-icon {
+    color: var(--color-red);
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+    cursor: text;
+  }
+
+  &__title {
+    color: var(--color-black);
+    margin-bottom: 1.6rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 3.2rem;
+  }
+
+  &__buttons {
+    width: 100%;
+    text-align: center;
+
+    *:first-child {
+      margin-right: 2.5%;
+    }
+
+    *:last-child {
+      margin-left: 2.5%;
+    }
+  }
+}
