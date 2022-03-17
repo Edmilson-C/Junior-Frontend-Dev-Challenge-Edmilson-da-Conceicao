@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import { nanoid } from 'nanoid'
 
 import { requestContacts } from '../apis/contacts.data'
 
@@ -22,8 +23,8 @@ export const ContactsProvider = ({ children }) => {
     }
   }
 
-  const addContact = (newContact) => {
-    setContacts([newContact, ...contacts])
+  const addContact = (newContact, location) => {
+    setContacts([{ ...newContact, id: nanoid(), location }, ...contacts])
   }
 
   const deleteContact = (contactId) => {
@@ -32,9 +33,13 @@ export const ContactsProvider = ({ children }) => {
   }
 
   return (
-    <ContactsContext.Provider value={{
-      contacts, getContacts, addContact, deleteContact
-    }}
+    <ContactsContext.Provider
+      value={{
+        contacts,
+        getContacts,
+        addContact,
+        deleteContact
+      }}
     >
       {children}
     </ContactsContext.Provider>
