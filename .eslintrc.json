@@ -8,13 +8,22 @@
     "ecmaFeatures": {
       "jsx": true
     },
+<<<<<<< HEAD
     "ecmaVersion": 12,
+=======
+    "ecmaVersion": "latest",
+>>>>>>> release/1.0
     "sourceType": "module"
   },
   "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+<<<<<<< HEAD
     "react/react-in-jsx-scope": 0
+=======
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": 0
+>>>>>>> release/1.0
   },
   "overrides": [
     {
@@ -29,7 +38,13 @@
         "consistent-return": "warn",
         "prefer-destructuring": "warn",
         "no-plusplus": "off",
+<<<<<<< HEAD
         "import/prefer-default-export": "off"
+=======
+        "import/prefer-default-export": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off"
+>>>>>>> release/1.0
       }
     }
   ]

@@ -1,0 +1,24 @@
+.header {
+  background-color: var(--color-white);
+  padding: 1.6rem 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 4rem;
+    margin-right: 1rem;
+  }
+
+  .circle {
+    border-width: 1.5rem;
+
+    width: 15rem;
+    height: 15rem;
+
+    right: -3rem;
+    top: -9rem;
+  }
+}
