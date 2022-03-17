@@ -30,28 +30,7 @@ const NewContact = ({ isVisible, setVisibility }) => {
     name, email, website, empresa, phoneNum, location, categorias, codPostal
   } = newContact
 
-  const handleChange = (event) => {
-    const { id, value } = event.target
-
-    if (id === 'rua') {
-      setRua(value)
-    } else if (id === 'cidade') {
-      setCidade(value)
-    } else {
-      setNewContact({ ...newContact, [id]: value })
-    }
-  }
-
-  const handleClick = (event) => {
-    const { id } = event.target
-
-    if (id === 'contact-button') {
-      location = `${rua}, ${cidade}`
-
-      setNewContact({ ...newContact })
-      addContact(newContact, location)
-    }
-
+  const clearFields = () => {
     setNewContact({
       id: 0,
       name: '',
@@ -70,6 +49,31 @@ const NewContact = ({ isVisible, setVisibility }) => {
     setVisibility(false)
   }
 
+  const handleChange = (event) => {
+    const { id, value } = event.target
+
+    if (id === 'rua') {
+      setRua(value)
+    } else if (id === 'cidade') {
+      setCidade(value)
+    } else {
+      setNewContact({ ...newContact, [id]: value })
+    }
+  }
+
+  const handleClick = () => {
+    clearFields()
+  }
+
+  const handleSubmit = () => {
+    location = `${rua}, ${cidade}`
+
+    setNewContact({ ...newContact })
+    addContact(newContact, location)
+
+    clearFields()
+  }
+
   return isVisible && (
     <div className="popup-component new-contact">
       <div className="new-contact__content">
@@ -81,19 +85,18 @@ const NewContact = ({ isVisible, setVisibility }) => {
 
         <span onClick={handleClick}><i id="new-contact__close" className="fas fa-times new-contact__close" /></span>
 
-        <form className="new-contact__form">
-          <Input type="text" id="name" name="name" label="Nome" value={name} handleChange={handleChange} />
-          <Input type="email" id="email" name="email" label="Email" value={email} handleChange={handleChange} />
-          <Input type="tel" id="phoneNum" name="phoneNum" label="Telefone" value={phoneNum} handleChange={handleChange} />
-          <Input type="url" id="website" name="website" label="Website" value={website} handleChange={handleChange} />
-          <Input type="text" id="empresa" name="empresa" label="Nome da empresa" value={empresa} handleChange={handleChange} />
+        <form className="new-contact__form" onSubmit={handleSubmit}>
+          <Input type="text" id="name" name="name" label="Nome" value={name} handleChange={handleChange} required />
+          <Input type="email" id="email" name="email" label="Email" value={email} handleChange={handleChange} required />
+          <Input type="tel" id="phoneNum" name="phoneNum" label="Telefone" value={phoneNum} handleChange={handleChange} required />
+          <Input type="text" id="website" name="website" label="Website" value={website} handleChange={handleChange} required />
+          <Input type="text" id="empresa" name="empresa" label="Nome da empresa" value={empresa} handleChange={handleChange} required />
           <Input type="text" id="categorias" name="categorias" label="Categorias" handleChange={handleChange} />
-          <Input type="text" id="rua" name="rua" label="Rua" value={rua} handleChange={handleChange} />
-          <Input type="text" id="cidade" name="cidade" label="Cidade" value={cidade} handleChange={handleChange} />
-          <Input type="number" id="codPostal" name="codPostal" label="Código Postal" value={codPostal} handleChange={handleChange} />
+          <Input type="text" id="rua" name="rua" label="Rua" value={rua} handleChange={handleChange} required />
+          <Input type="text" id="cidade" name="cidade" label="Cidade" value={cidade} handleChange={handleChange} required />
+          <Input type="number" id="codPostal" name="codPostal" label="Código Postal" value={codPostal} handleChange={handleChange} required />
+          <Button id="contact-button" content="Gravar Contacto" type="green" isFormButton />
         </form>
-
-        <Button id="contact-button" content="Gravar Contacto" type="green" handleClick={handleClick} />
       </div>
     </div>
   )
