@@ -69,8 +69,8 @@ const Homepage = () => {
         </div>
 
         <div className="filter">
-          <h1 className="filter__qty">{contactsDisplayed.length || 0}</h1>
-          <h2 className="filter__title">
+          <h1 className="heading-1 filter__qty">{contactsDisplayed.length || 0}</h1>
+          <h2 className="heading-2 filter__title">
             Contactos <span>Adicionados</span>
           </h2>
           <p className="filter__subtitle">
