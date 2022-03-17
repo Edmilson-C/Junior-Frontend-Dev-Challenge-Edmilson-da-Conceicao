@@ -21,7 +21,7 @@ const DeleteContact = ({ contactId, isDeleteVisible, setIsDeleteVisible }) => {
   }
 
   return isDeleteVisible && (
-    <div className="delete-contact">
+    <div className="popup-component delete-contact">
       <div className="delete-contact__content">
         <i className="far fa-times-circle delete-contact__close-icon" />
         <h3 className="heading-3 delete-contact__title">Apagar Contacto</h3>

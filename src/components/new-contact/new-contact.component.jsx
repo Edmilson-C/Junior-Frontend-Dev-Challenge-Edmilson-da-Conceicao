@@ -71,7 +71,7 @@ const NewContact = ({ isVisible, setVisibility }) => {
   }
 
   return isVisible && (
-    <div className="new-contact">
+    <div className="popup-component new-contact">
       <div className="new-contact__content">
         <h3 className="heading-3 new-contact__title">
           <i className="fas fa-plus" />

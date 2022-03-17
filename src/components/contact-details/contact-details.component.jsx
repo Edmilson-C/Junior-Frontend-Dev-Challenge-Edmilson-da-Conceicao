@@ -32,7 +32,7 @@ const ContactDetails = ({
 
   return (
     isVisible && (
-      <div className="contact-details">
+      <div className="popup-component contact-details">
         <div className="contact-details__content">
           <span onClick={handleClick}>
             <i id="contact-details__close" className="fas fa-times contact-details__close" />
