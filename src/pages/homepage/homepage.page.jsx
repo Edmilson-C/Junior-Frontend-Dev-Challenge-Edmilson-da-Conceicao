@@ -15,8 +15,8 @@ import './homepage.styles.scss'
 const Homepage = () => {
   const { contacts, getContacts } = useContext(ContactsContext)
 
-  const [nome, setNome] = useState()
-  const [company, setCompany] = useState()
+  const [nome, setNome] = useState('')
+  const [company, setCompany] = useState('')
   const [contactsDisplayed, setContactsDisplayed] = useState([])
 
   const [isAddContactVisible, setIsAddContactVisible] = useState(false)
@@ -49,7 +49,7 @@ const Homepage = () => {
     }
 
     const aux = contacts.filter(
-      (item) => item.name.includes(nome) || item.empresa.includes(company)
+      (item) => item.name.includes(nome) && item.empresa.includes(company)
     )
 
     setContactsDisplayed(aux)
