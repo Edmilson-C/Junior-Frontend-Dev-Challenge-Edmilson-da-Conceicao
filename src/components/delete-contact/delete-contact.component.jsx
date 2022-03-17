@@ -4,12 +4,18 @@ import Button from '../button/button.component'
 
 import './delete-contact.styles.scss'
 
-const DeleteContact = () => {
-  const handleClick = () => {
-    console.log('button clicked!')
+const DeleteContact = ({ isDeleteVisible, setIsDeleteVisible }) => {
+  const handleClick = (event) => {
+    const { id } = event.target
+
+    if (id === 'btnDelete') {
+      console.log('delete')
+    }
+
+    setIsDeleteVisible(false)
   }
 
-  return (
+  return isDeleteVisible && (
     <div className="delete-contact">
       <div className="delete-contact__content">
         <i className="far fa-times-circle delete-contact__close-icon" />
