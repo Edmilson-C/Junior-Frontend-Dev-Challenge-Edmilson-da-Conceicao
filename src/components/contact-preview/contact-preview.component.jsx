@@ -9,7 +9,7 @@ import DeleteContact from '../delete-contact/delete-contact.component'
 import './contact-preview.styles.scss'
 
 const ContactPreview = ({
-  imgUrl, name, email, empresa, website, codPostal, phoneNum, location, categorias
+  imgUrl, id, name, email, empresa, website, codPostal, phoneNum, location, categorias
 }) => {
   const [isAddContactVisible, setIsAddContactVisible] = useState(false)
   const [isDeleteContactVisible, setIsDeleteContactVisible] = useState(false)
@@ -31,6 +31,7 @@ const ContactPreview = ({
         setIsDeleteVisible={setIsDeleteContactVisible}
       />
       <DeleteContact
+        contactId={id}
         isDeleteVisible={isDeleteContactVisible}
         setIsDeleteVisible={setIsDeleteContactVisible}
       />

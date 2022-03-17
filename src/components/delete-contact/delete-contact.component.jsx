@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Button from '../button/button.component'
 
+import { ContactsContext } from '../../context/contacts.context'
+
 import './delete-contact.styles.scss'
 
-const DeleteContact = ({ isDeleteVisible, setIsDeleteVisible }) => {
+const DeleteContact = ({ contactId, isDeleteVisible, setIsDeleteVisible }) => {
+  const { deleteContact } = useContext(ContactsContext)
+
   const handleClick = (event) => {
     const { id } = event.target
 
     if (id === 'btnDelete') {
       console.log('delete')
+      deleteContact(contactId)
     }
 
     setIsDeleteVisible(false)

@@ -11,6 +11,7 @@ const ContactOverview = ({ contactos }) => (
     }) => (
       <ContactPreview
         key={id}
+        id={id}
         name={name}
         email={email}
         empresa={empresa}
