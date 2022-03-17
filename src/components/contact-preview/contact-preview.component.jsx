@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 
 import ContactDetails from '../contact-details/contact-details.component'
 import PersonInfo from '../person-info/person-info.component'
+import DeleteContact from '../delete-contact/delete-contact.component'
 
 import './contact-preview.styles.scss'
 
@@ -11,6 +12,7 @@ const ContactPreview = ({
   imgUrl, name, email, empresa, website, codPostal, phoneNum, location, categorias
 }) => {
   const [isAddContactVisible, setIsAddContactVisible] = useState(false)
+  const [isDeleteContactVisible, setIsDeleteContactVisible] = useState(false)
 
   return (
     <div className="contact-preview">
@@ -26,6 +28,11 @@ const ContactPreview = ({
         categorias={categorias}
         isVisible={isAddContactVisible}
         setVisibility={setIsAddContactVisible}
+        setIsDeleteVisible={setIsDeleteContactVisible}
+      />
+      <DeleteContact
+        isDeleteVisible={isDeleteContactVisible}
+        setIsDeleteVisible={setIsDeleteContactVisible}
       />
       <PersonInfo imgUrl={imgUrl} name={name} email={email} parent="preview" />
       <div className="contact-preview__details">

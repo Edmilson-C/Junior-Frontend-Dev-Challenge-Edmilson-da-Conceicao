@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import PersonInfo from '../person-info/person-info.component'
+import DeleteContact from '../delete-contact/delete-contact.component'
 
 import ColabLogo from '../../assets/colab-logo.svg'
 
@@ -16,18 +17,17 @@ const ContactDetails = ({
   codPostal,
   categorias,
   isVisible,
-  setVisibility
+  setVisibility,
+  setIsDeleteVisible
 }) => {
-  const [isDeleteContactVisible, setIsDeleteContactVisible] = useState(false)
-
   const handleClick = (event) => {
     const { id } = event.target
 
-    if (id === 'contact-details__close') {
-      setVisibility(false)
-    } else {
-      console.log('Show delete dialog')
+    if (id === 'contact-details__trash') {
+      console.log('close')
+      setIsDeleteVisible(true)
     }
+    setVisibility(false)
   }
 
   return (
