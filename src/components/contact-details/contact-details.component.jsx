@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import PersonInfo from '../person-info/person-info.component'
-import DeleteContact from '../delete-contact/delete-contact.component'
 
 import ColabLogo from '../../assets/colab-logo.svg'
 
@@ -24,7 +23,6 @@ const ContactDetails = ({
     const { id } = event.target
 
     if (id === 'contact-details__trash') {
-      console.log('close')
       setIsDeleteVisible(true)
     }
     setVisibility(false)

@@ -26,9 +26,11 @@ const NewContact = ({ isVisible, setVisibility }) => {
     codPostal: ''
   })
 
-  let {
-    name, email, website, empresa, phoneNum, location, categorias, codPostal
+  const {
+    name, email, website, empresa, phoneNum, categorias, codPostal
   } = newContact
+
+  let { location } = newContact
 
   const clearFields = () => {
     setNewContact({
@@ -101,4 +103,5 @@ const NewContact = ({ isVisible, setVisibility }) => {
     </div>
   )
 }
+
 export default NewContact
