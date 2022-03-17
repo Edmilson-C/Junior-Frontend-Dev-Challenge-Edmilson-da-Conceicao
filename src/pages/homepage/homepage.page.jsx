@@ -98,6 +98,7 @@ const Homepage = () => {
         </div>
 
         <div className="about">
+          <div className="circle" />
           <h3 className="about__title">
             Cuidamos do seu <span>Negocio.</span>
           </h3>

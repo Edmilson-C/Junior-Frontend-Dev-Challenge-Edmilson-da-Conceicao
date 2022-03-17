@@ -9,6 +9,7 @@ const Header = () => (
     <div className="container">
       <Logo className="header__logo" />
       <h4 className="header__title"> Colab Pub Inc </h4>
+      <div className="circle" />
     </div>
   </header>
 )
