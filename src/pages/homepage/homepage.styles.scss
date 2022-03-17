@@ -117,4 +117,12 @@ main {
       bottom: 0;
     }
   }
+
+  .no-contacts {
+    align-self: center;
+    justify-self: center;
+
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
 }

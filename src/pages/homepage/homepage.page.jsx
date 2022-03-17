@@ -92,7 +92,9 @@ const Homepage = () => {
             value={company}
             handleChange={filterContacts}
           />
-          <span onClick={clearInputs}><i className="fas fa-filter filter__icon" /></span>
+          <span onClick={clearInputs}>
+            <i className="fas fa-filter filter__icon" />
+          </span>
         </div>
 
         <div className="about">
@@ -105,7 +107,12 @@ const Homepage = () => {
           <img src={blackManImage} alt="" className="about__image" />
         </div>
 
-        <ContactOverview contactos={contactsDisplayed} />
+        {/* eslint-disable-next-line no-nested-ternary */}
+        {contactsDisplayed.length > 0 ? (
+          <ContactOverview contactos={contactsDisplayed} />
+        ) : (
+          <h2 className="no-contacts"> Nenhum contacto corresponde a essa pesquisa </h2>
+        )}
       </div>
     </main>
   )
