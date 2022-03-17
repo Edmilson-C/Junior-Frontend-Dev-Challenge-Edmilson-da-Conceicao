@@ -10,6 +10,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1200px) {
+
+    }
+    
+    @media (max-width: 900px) {
+      padding: 2.4rem 3.2rem;
+    }
+    
+    @media (max-width: 740px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 600px) {
+     
+    }
   }
 
   &__title {
@@ -41,6 +57,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.4rem 4rem;
+
+    @media (max-width: 1200px) {
+      gap: 2rem;
+    }
+    
+    @media (max-width: 740px) {
+      gap: 1rem;
+    }
+    
+    @media (max-width: 525px) {
+     grid-template-columns: 1fr;
+    }
 
     .input-group__input {
       width: 100%;
