@@ -8,6 +8,24 @@ html {
   font-size: 62.5%;
 }
 
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   background-color: #EEEFF3;
 }
