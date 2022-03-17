@@ -73,6 +73,16 @@
       padding: 0;
     }
 
+    &:last-child {
+      span {
+        font-size: 1.6rem;
+        color: var(--color-text-dark);
+        background-color: var(--color-primary-tag);
+        padding: 0.5rem 1rem;
+        position: relative;
+      }
+    }
+
     span {
       color: var(--color-text-dark);
       font-size: 2rem;

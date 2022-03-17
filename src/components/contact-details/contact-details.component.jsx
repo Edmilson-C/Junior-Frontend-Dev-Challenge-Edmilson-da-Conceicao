@@ -58,6 +58,12 @@ const ContactDetails = ({
             <i className="far fa-image" />
             <span>{codPostal}</span>
           </p>
+          <p className="contact-details__detail">
+            <i className="far fa-bookmark" />
+            {categorias.map((item) => (
+              <span>{item}</span>
+            ))}
+          </p>
         </div>
       </div>
     )
