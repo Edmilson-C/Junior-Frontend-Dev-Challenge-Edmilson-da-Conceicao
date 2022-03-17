@@ -9,6 +9,18 @@
     height: 3.2rem;
     font-size: 1.6rem;
 
+    @media (max-width: 1200px) {
+
+    }
+    
+    @media (max-width: 900px) {
+    font-size: 1.4rem;
+    }
+    
+    @media (max-width: 600px) {
+     
+    }
+
     &:focus {
       outline: none;
     }

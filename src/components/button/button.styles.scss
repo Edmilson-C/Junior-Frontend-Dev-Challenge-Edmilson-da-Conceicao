@@ -6,6 +6,18 @@
   font-weight: var(--font-bold);
   font-size: 1.6rem;
 
+  @media (max-width: 1200px) {
+  }
+  
+  @media (max-width: 900px) {
+  font-size: 1.4rem;
+  padding: 1.4rem 0;
+  }
+  
+  @media (max-width: 600px) {
+   
+  }
+
   &--white {
     background-color: var(--color-white);
     color: var(--color-primary);
@@ -13,6 +25,19 @@
 
     padding-left: 3.2rem;
     padding-right: 3.2rem;
+
+    @media (max-width: 1200px) {
+
+    }
+    
+    @media (max-width: 900px) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    }
+    
+    @media (max-width: 600px) {
+     
+    }
   }
 
   &--green {
@@ -22,6 +47,19 @@
 
     padding-left: 8rem;
     padding-right: 8rem;
+
+    @media (max-width: 1040px) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    
+    @media (max-width: 900px) {
+    
+    }
+    
+    @media (max-width: 740px) {
+     width: 100%;
+    }
   }
   
   &--grey {
