@@ -5,7 +5,8 @@ import { requestContacts } from '../apis/contacts.data'
 export const ContactsContext = createContext({
   contacts: [],
   getContacts: () => {},
-  addContact: () => {}
+  addContact: () => {},
+  deleteContact: () => {}
 })
 
 export const ContactsProvider = ({ children }) => {
@@ -25,8 +26,16 @@ export const ContactsProvider = ({ children }) => {
     setContacts([newContact, ...contacts])
   }
 
+  const deleteContact = (contactId) => {
+    const aux = contacts.filter(({ id }) => contactId !== id)
+    setContacts([...aux])
+  }
+
   return (
-    <ContactsContext.Provider value={{ contacts, getContacts, addContact }}>
+    <ContactsContext.Provider value={{
+      contacts, getContacts, addContact, deleteContact
+    }}
+    >
       {children}
     </ContactsContext.Provider>
   )
