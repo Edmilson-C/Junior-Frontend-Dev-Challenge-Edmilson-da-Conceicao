@@ -8,7 +8,7 @@ const Header = () => (
   <header className="header">
     <div className="container">
       <Logo className="header__logo" />
-      <h4 className="header__title"> Colab Pub Inc </h4>
+      <h4 className="heading-4 header__title"> Colab Pub Inc </h4>
       <div className="circle" />
     </div>
   </header>

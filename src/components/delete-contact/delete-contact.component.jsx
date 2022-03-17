@@ -24,7 +24,7 @@ const DeleteContact = ({ contactId, isDeleteVisible, setIsDeleteVisible }) => {
     <div className="delete-contact">
       <div className="delete-contact__content">
         <i className="far fa-times-circle delete-contact__close-icon" />
-        <h3 className="delete-contact__title">Apagar Contacto</h3>
+        <h3 className="heading-3 delete-contact__title">Apagar Contacto</h3>
         <p className="delete-contact__subtitle">Tem certeza que deseja apagar o contacto?</p>
         <div className="delete-contact__buttons">
           <Button id="btnCancel" type="grey" content="Cancelar" handleClick={handleClick} />
