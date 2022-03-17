@@ -33,6 +33,12 @@ const Homepage = () => {
     setIsAddContactVisible(true)
   }
 
+  const clearInputs = () => {
+    setNome('')
+    setCompany('')
+    setContactsDisplayed(contacts)
+  }
+
   const filterContacts = (event) => {
     const { name, value } = event.target
 
@@ -86,6 +92,7 @@ const Homepage = () => {
             value={company}
             handleChange={filterContacts}
           />
+          <span onClick={clearInputs}><i className="fas fa-filter filter__icon" /></span>
         </div>
 
         <div className="about">

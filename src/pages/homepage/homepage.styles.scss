@@ -38,11 +38,22 @@ main {
   .filter {
     background-color: var(--color-white);
     padding: 3.2rem 2.4rem 2.4rem;
+    position: relative;
 
     display: grid;
     grid-template-columns: min-content repeat(4, 1fr);
     grid-template-rows: min-content 1fr min-content;
     align-self: stretch;
+
+    &__icon {
+      color: var(--color-primary);
+      font-size: 2rem;
+      cursor: pointer;
+
+      position: absolute;
+      bottom: 2.4rem;
+      right: 3rem;
+    }
 
     &__qty {
       margin-top: -1.5rem;
